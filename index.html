@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>TODO LIST</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/e3ae05b8e6.js"></script>
+</head>
+<body>
+
+  <main class="main">
+    <form class="form">
+      <div class="inputArea">
+        <input type="text" class="inputText js-todo-add-item" value="" placeholder="ここにTODO内容を書く">
+        <span class="error js-input-error">入力が空です</span>
+      </div>
+      <button class="btn js-todo-add">TODOを追加</button>
+    </form>
+
+    <div class="searchBox">
+      <i class="fa fa-search searchBox__icon" aria-hidden="true"></i>
+      <input type="text" class="searchBox__input js-input-search"
+             value="" placeholder="ここに絞り込みたいキーワードを入力する">
+    </div>
+
+    <ul class="list js-list-target">
+      <li class="list__item js-search-target" data-text="サンプルTODOタスク">
+        <i class="fa fa-square-o icon-check js-click-done" aria-hidden="true"></i>
+        <span class="js-click-text">サンプルTODOタスク</span>
+        <input type="text" class="editText js-click-text-target" value="サンプルTODOタスク">
+        <i class="fa fa-trash icon-trash js-click-trash" aria-hidden="true"></i>
+      </li>
+      <li class="list__item list__item--done js-search-target" data-text="サンプルDoneタスク">
+        <i class="fa fa-check-square icon-check js-click-todo" aria-hidden="true"></i>
+        <span class="js-click-edit text js-click-text">サンプルDoneタスク</span>
+        <input type="text" class="editText js-click-text-target" value="サンプルDoneタスク">
+        <i class="fa fa-trash icon-trash js-click-trash" aria-hidden="true"></i>
+      </li>
+    </ul>
+  </main>
+
+<script src="app.js"></script>
+</body>
+</html>
